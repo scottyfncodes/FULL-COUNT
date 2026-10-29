@@ -186,7 +186,7 @@ function GameRow({ g }: { g: ScheduleGame }) {
             <span className="abbr">{g[side].team.abbreviation}</span>
             <span className="name">
               {g[side].team.teamName}
-              {g[side].team.record && group !== 'live' && (
+              {g[side].team.record && group !== 'live' && g.gameType === 'R' && (
                 <span className="rec">
                   {g[side].team.record.wins}–{g[side].team.record.losses}
                 </span>
